@@ -41,13 +41,13 @@
                 <ul class="cards">
                     <li class="card" ng-repeat="employee in filteredEmployees = (employees | filter: searchString | orderBy: sortCol: sortReverse)">
                         <!-- this img should show the employee picture --> 
-                        <img ng-src="{{employee.picUrl}}" alt="picture of {{employee.firstName}} {{employee.lastName}}">
+                        <img ng-src="{{employee.picUrl}}" alt="picture of {{employees.firstName}} {{employees.lastName}}">
                         <div class="details">
                             <h2 class="name">{{employee.firstName}} {{employee.lastName}}</h2>
                             <p class="title">{{employee.title}}</p>
                             <p class="department">{{employee.department}}</p>
                             <p class="phone"ng-if="employee.phone != undefined"><a href="tel:+{{employee.phone}}">{{employee.phone}}</a></p>
-                            <p class="email" ng-if"{{employee.email}}"><a href="mailto:{{employee.email}}"></a>{{employee.email}}</p>
+                            <p class="email" ng-if="{{employee.email}}"><a href="mailto:{{employee.email}}"></a>{{employee.email}}</p>
                         </div>
                     </li>
                 </ul>
